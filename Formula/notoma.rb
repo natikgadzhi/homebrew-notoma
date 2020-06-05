@@ -5,7 +5,7 @@ class Notoma < Formula
   homepage "https://xnutsive.github.io/notoma/"
   url "https://files.pythonhosted.org/packages/f4/30/74c03c74c305dc2958b26dc60704807788cb10541e8000cb95073fdcc860/notoma-0.2.tar.gz"
   sha256 "3fa1893aebc6b682fa0032bdadb503ff4a823db3380ed3d19b6b7b3a4b4068e1"
-  version 0.2
+  version "0.2"
 
   depends_on "python3"
 
