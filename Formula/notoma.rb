@@ -3,9 +3,9 @@ class Notoma < Formula
 
   desc "Write articles for your static gen blog in Notion."
   homepage "https://xnutsive.github.io/notoma/"
-  url "https://files.pythonhosted.org/packages/f4/30/74c03c74c305dc2958b26dc60704807788cb10541e8000cb95073fdcc860/notoma-0.2.tar.gz"
-  sha256 "3fa1893aebc6b682fa0032bdadb503ff4a823db3380ed3d19b6b7b3a4b4068e1"
-  version "0.2"
+  url "https://files.pythonhosted.org/packages/e9/c0/d34f08aec6b36be79f7c9898b42f6034b15742c04f5a23a0f5dff80d9f88/notoma-0.2.1.tar.gz"
+  sha256 "b38b43bec7d74d662a0a78e65a417bc9f17a755165f1f6aafd8527beceacf9f5"
+  version "0.2.1"
 
   depends_on "python3"
 
