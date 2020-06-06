@@ -110,11 +110,25 @@ class Notoma < Formula
   end
 
   def install
-    virtualenv_create(libexec, "python3")
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3")
+
+    # NOTE: Force pip version 20.0.2 as 20.1 breaks notion-py setup (see notion#147)
+    system libexec/"bin/pip", "install",
+      "--ignore-installed",
+      "pip==20.0.2"
+
+    # NOTE: Here's how to implement a build source flag. 
+    # File.open("notoma/utils/build.py", "w+") { |file| file.write("PKG = \"brew\"") }
+
+    venv.pip_install resources
+    venv.pip_install_and_link buildpath
+
+    # NOTE: Add console autocompletions.
+    # bash_completion.install "scripts/completion/dvc.bash" => "dvc"
+    # zsh_completion.install "scripts/completion/dvc.zsh"
   end
 
   test do
-    system "#{bin}/notoma", "--version"
+    system "#{bin}/notoma", "version"
   end
 end
